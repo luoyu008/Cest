@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\vs c\\2024.7.30\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{444164D1-0872-41A5-8527-77A154E134CB}|2024.7.30\\2024.7.30.vcxproj|D:\\vs c\\2024.7.30\\2024.7.30\\ybu.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{444164D1-0872-41A5-8527-77A154E134CB}|2024.7.30\\2024.7.30.vcxproj|solutionrelative:2024.7.30\\ybu.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{444164D1-0872-41A5-8527-77A154E134CB}|2024.7.30\\2024.7.30.vcxproj|D:\\WINDOWS KITS\\10\\INCLUDE\\10.0.22621.0\\UCRT\\STDIO.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "stdio.h",
+              "DocumentMoniker": "D:\\Windows Kits\\10\\Include\\10.0.22621.0\\ucrt\\stdio.h",
+              "RelativeDocumentMoniker": "..\\..\\Windows Kits\\10\\Include\\10.0.22621.0\\ucrt\\stdio.h",
+              "ToolTip": "D:\\Windows Kits\\10\\Include\\10.0.22621.0\\ucrt\\stdio.h",
+              "RelativeToolTip": "..\\..\\Windows Kits\\10\\Include\\10.0.22621.0\\ucrt\\stdio.h",
+              "ViewState": "AQIAADUBAAAAAAAAAAAAADkBAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-08-03T02:16:23.91Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ybu.cpp",
+              "DocumentMoniker": "D:\\vs c\\2024.7.30\\2024.7.30\\ybu.cpp",
+              "RelativeDocumentMoniker": "2024.7.30\\ybu.cpp",
+              "ToolTip": "D:\\vs c\\2024.7.30\\2024.7.30\\ybu.cpp",
+              "RelativeToolTip": "2024.7.30\\ybu.cpp",
+              "ViewState": "AQIAAKUAAAAAAAAAAAAUwKkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-07-30T14:14:44.556Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
