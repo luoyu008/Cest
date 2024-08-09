@@ -1,0 +1,58 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\vs c\\2024.8.9\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DE941312-42FF-42E2-AC55-53D940FD998D}|2024.8.9\\2024.8.9.vcxproj|D:\\vs c\\2024.8.9\\2024.8.9\\2024.8.9.biji.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{DE941312-42FF-42E2-AC55-53D940FD998D}|2024.8.9\\2024.8.9.vcxproj|solutionrelative:2024.8.9\\2024.8.9.biji.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DE941312-42FF-42E2-AC55-53D940FD998D}|2024.8.9\\2024.8.9.vcxproj|D:\\vs c\\2024.8.9\\2024.8.9\\2024.8.9.1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{DE941312-42FF-42E2-AC55-53D940FD998D}|2024.8.9\\2024.8.9.vcxproj|solutionrelative:2024.8.9\\2024.8.9.1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 271,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "2024.8.9.biji.cpp",
+              "DocumentMoniker": "D:\\vs c\\2024.8.9\\2024.8.9\\2024.8.9.biji.cpp",
+              "RelativeDocumentMoniker": "2024.8.9\\2024.8.9.biji.cpp",
+              "ToolTip": "D:\\vs c\\2024.8.9\\2024.8.9\\2024.8.9.biji.cpp",
+              "RelativeToolTip": "2024.8.9\\2024.8.9.biji.cpp",
+              "ViewState": "AQIAACEAAAAAAAAAAAAywCsAAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-08-09T01:27:40.643Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "2024.8.9.1.cpp",
+              "DocumentMoniker": "D:\\vs c\\2024.8.9\\2024.8.9\\2024.8.9.1.cpp",
+              "RelativeDocumentMoniker": "2024.8.9\\2024.8.9.1.cpp",
+              "ToolTip": "D:\\vs c\\2024.8.9\\2024.8.9\\2024.8.9.1.cpp",
+              "RelativeToolTip": "2024.8.9\\2024.8.9.1.cpp",
+              "ViewState": "AQIAADYAAAAAAAAAAAAYwD0AAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-08-09T01:27:52.941Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
