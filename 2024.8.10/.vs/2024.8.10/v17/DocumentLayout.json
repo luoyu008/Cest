@@ -1,0 +1,74 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\vs c\\2024.8.10\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B23FDA80-C67D-456B-8964-6BD48B729758}|2024.8.10\\2024.8.10.vcxproj|D:\\vs c\\2024.8.10\\2024.8.10\\2024.8.10.biji.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B23FDA80-C67D-456B-8964-6BD48B729758}|2024.8.10\\2024.8.10.vcxproj|solutionrelative:2024.8.10\\2024.8.10.biji.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B23FDA80-C67D-456B-8964-6BD48B729758}|2024.8.10\\2024.8.10.vcxproj|D:\\vs c\\2024.8.10\\2024.8.10\\2024.8.10.1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{B23FDA80-C67D-456B-8964-6BD48B729758}|2024.8.10\\2024.8.10.vcxproj|solutionrelative:2024.8.10\\2024.8.10.1.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B23FDA80-C67D-456B-8964-6BD48B729758}|2024.8.10\\2024.8.10.vcxproj|D:\\WINDOWS KITS\\10\\INCLUDE\\10.0.22621.0\\UCRT\\STDIO.H||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 339,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "stdio.h",
+              "DocumentMoniker": "D:\\Windows Kits\\10\\Include\\10.0.22621.0\\ucrt\\stdio.h",
+              "RelativeDocumentMoniker": "..\\..\\Windows Kits\\10\\Include\\10.0.22621.0\\ucrt\\stdio.h",
+              "ToolTip": "D:\\Windows Kits\\10\\Include\\10.0.22621.0\\ucrt\\stdio.h",
+              "RelativeToolTip": "..\\..\\Windows Kits\\10\\Include\\10.0.22621.0\\ucrt\\stdio.h",
+              "ViewState": "AQIAACIEAAAAAAAAAAAYwC0EAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2024-08-10T11:08:08.487Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "2024.8.10.biji.cpp",
+              "DocumentMoniker": "D:\\vs c\\2024.8.10\\2024.8.10\\2024.8.10.biji.cpp",
+              "RelativeDocumentMoniker": "2024.8.10\\2024.8.10.biji.cpp",
+              "ToolTip": "D:\\vs c\\2024.8.10\\2024.8.10\\2024.8.10.biji.cpp",
+              "RelativeToolTip": "2024.8.10\\2024.8.10.biji.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-08-10T01:44:42.772Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "2024.8.10.1.cpp",
+              "DocumentMoniker": "D:\\vs c\\2024.8.10\\2024.8.10\\2024.8.10.1.cpp",
+              "RelativeDocumentMoniker": "2024.8.10\\2024.8.10.1.cpp",
+              "ToolTip": "D:\\vs c\\2024.8.10\\2024.8.10\\2024.8.10.1.cpp",
+              "RelativeToolTip": "2024.8.10\\2024.8.10.1.cpp",
+              "ViewState": "AQIAADkAAAAAAAAAAAAAADoAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-08-10T01:44:33.307Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
