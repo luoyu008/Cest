@@ -1,0 +1,19 @@
+﻿  2024.9.4.1.c
+  2024.9.5.1.c
+  正在生成代码...
+D:\vs c\2024.9.4\2024.9.4\2024.9.4.h(2,9): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
+D:\vs c\2024.9.4\2024.9.4\2024.9.4.h(3,9): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
+D:\vs c\2024.9.4\2024.9.4\2024.9.4.h(4,9): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
+D:\vs c\2024.9.4\2024.9.4\2024.9.4.h(5,9): warning C4067: 预处理器指令后有意外标记 - 应输入换行符
+D:\vs c\2024.9.4\2024.9.4\2024.9.4.1.c(33,10): warning C4133: “初始化”: 从“tree *”到“stack *”的类型不兼容
+D:\vs c\2024.9.4\2024.9.4\2024.9.4.1.c(59,10): warning C4133: “初始化”: 从“tree *”到“stack *”的类型不兼容
+2024.9.4.1.obj : error LNK2019: 无法解析的外部符号 TREECreat，函数 main 中引用了该符号
+2024.9.4.1.obj : error LNK2019: 无法解析的外部符号 TREENum，函数 test 中引用了该符号
+2024.9.4.1.obj : error LNK2019: 无法解析的外部符号 QUEUEInit，函数 test 中引用了该符号
+2024.9.4.1.obj : error LNK2019: 无法解析的外部符号 QUEUEPush，函数 test 中引用了该符号
+2024.9.4.1.obj : error LNK2019: 无法解析的外部符号 QUEUEEmpty，函数 test 中引用了该符号
+2024.9.4.1.obj : error LNK2019: 无法解析的外部符号 QUEUEPop，函数 test 中引用了该符号
+2024.9.4.1.obj : error LNK2019: 无法解析的外部符号 STACKPush，函数 TREEFRONT 中引用了该符号
+2024.9.4.1.obj : error LNK2019: 无法解析的外部符号 STACKEmpty，函数 TREEFRONT 中引用了该符号
+2024.9.4.1.obj : error LNK2019: 无法解析的外部符号 STACKPop，函数 TREEFRONT 中引用了该符号
+D:\vs c\2024.9.5\x64\Debug\2024.9.5.exe : fatal error LNK1120: 9 个无法解析的外部命令
