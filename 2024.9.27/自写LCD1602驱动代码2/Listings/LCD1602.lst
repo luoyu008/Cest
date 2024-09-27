@@ -1,0 +1,218 @@
+C51 COMPILER V9.60.7.0   LCD1602                                                           09/26/2024 23:42:32 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE LCD1602
+OBJECT MODULE PLACED IN .\Objects\LCD1602.obj
+COMPILER INVOKED BY: D:\keil5\C51\BIN\C51.EXE LCD1602.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\LCD
+                    -1602.lst) TABS(2) OBJECT(.\Objects\LCD1602.obj)
+
+line level    source
+
+   1          #include "LCD1602.h"
+   2          void LCD1602_Delay1ms(void) //@11.0592MHz
+   3          {
+   4   1        unsigned char data i, j;
+   5   1      
+   6   1        _nop_();
+   7   1        i = 2;
+   8   1        j = 199;
+   9   1        do
+  10   1        {
+  11   2          while (--j);
+  12   2        } while (--i);
+  13   1      }
+  14          int pow(unsigned char num, unsigned char num2) {
+  15   1        unsigned int i = 0;
+  16   1        int temp = 1;
+  17   1        for (i = 0; i < num2 ; i++) {
+  18   2          temp *= num;
+  19   2        }
+  20   1        return  temp;
+  21   1      }
+  22          void LCD1602_Commend(unsigned char commend){//写指令
+  23   1        RS=0;
+  24   1        RW=0;
+  25   1        port=commend;
+  26   1        EN=1;
+  27   1        LCD1602_Delay1ms();
+  28   1        //port=commend;
+  29   1        EN=0;
+  30   1        LCD1602_Delay1ms();
+  31   1      }
+  32          void LCD1602_Data(unsigned char Data){//写数据
+  33   1        RS=1;
+  34   1        RW=0;
+  35   1        port=Data;
+  36   1        EN=1;
+  37   1        LCD1602_Delay1ms();
+  38   1        EN=0;
+  39   1        LCD1602_Delay1ms();
+  40   1      }
+  41          void LCD1602_Init(){    //初始化
+  42   1        LCD1602_Commend(0x38);//总数据线8位 显示2行 5*7点阵/字符
+  43   1        LCD1602_Commend(0x0C);//显示开 无光标 光标不闪烁
+  44   1        LCD1602_Commend(0x06);//读写操作后光标加一 画面不动
+  45   1        LCD1602_Commend(0x01);//清屏
+  46   1      }
+  47          //显示字符
+  48          void LCD1602_ShowChar(unsigned char row,unsigned char col,char s){
+  49   1        if(row==1){
+  50   2          LCD1602_Commend(0x80|(col-1));
+  51   2        }
+  52   1        else if(row==2){
+  53   2          LCD1602_Commend(0x80|(col-1)+0x40);
+  54   2        }
+C51 COMPILER V9.60.7.0   LCD1602                                                           09/26/2024 23:42:32 PAGE 2   
+
+  55   1        LCD1602_Data(s);
+  56   1      }
+  57          //显示字符串
+  58          void LCD1602_ShowString(unsigned char row,unsigned char col,const char* str){
+  59   1        unsigned char i=0;
+  60   1        if(row==1){
+  61   2          LCD1602_Commend(0x80|(col-1));
+  62   2        }
+  63   1        else if(row==2){
+  64   2          LCD1602_Commend(0x80|(col-1)+0x40);
+  65   2        }
+  66   1        while(*(str+i)!='\0'){
+  67   2          LCD1602_Data(*(str+i));
+  68   2          i++;
+  69   2        }
+  70   1      }
+  71          //显示数字
+  72          void LCD1602_ShowNum(unsigned char row,unsigned char col,unsigned int num,unsigned char length){
+  73   1        unsigned char i=0; 
+  74   1        if(row==1){
+  75   2          LCD1602_Commend(0x80|(col-1));
+  76   2        }
+  77   1        else if(row==2){
+  78   2          LCD1602_Commend(0x80|(col-1)+0x40);
+  79   2        }
+  80   1        for(i=length;i>0;i--){
+  81   2        LCD1602_Data(num/pow(10,i-1)%10+'0');
+  82   2        //num=num%pow(10,i-1);
+  83   2        }
+  84   1      }
+  85          //显示有符号为的数字
+  86          void LCD1602_ShowSignedNum(unsigned char row,unsigned char col,int num,unsigned char length){
+  87   1        unsigned char i=0;
+  88   1        unsigned int num1;
+  89   1        if(row==1){
+  90   2          LCD1602_Commend(0x80|(col-1));
+  91   2        }
+  92   1        else if(row==2){
+  93   2          LCD1602_Commend(0x80|(col-1)+0x40);
+  94   2        }
+  95   1        if(num>=0)
+  96   1        {
+  97   2          LCD1602_Data('+');
+  98   2          num1=num;
+  99   2        }
+ 100   1        else
+ 101   1        {
+ 102   2          LCD1602_Data('-');
+ 103   2          num1=-num;
+ 104   2        }
+ 105   1        for(i=length;i>0;i--)
+ 106   1        {
+ 107   2          LCD1602_Data(num1/pow(10,i-1)%10+'0');
+ 108   2        }
+ 109   1      
+ 110   1      //  if(num<0){
+ 111   1      //    LCD1602_Data('-');
+ 112   1      //    num1=-num;
+ 113   1      //  }
+ 114   1      //  else
+ 115   1      //  {
+ 116   1      //    LCD1602_Data(' ');
+C51 COMPILER V9.60.7.0   LCD1602                                                           09/26/2024 23:42:32 PAGE 3   
+
+ 117   1      //    num1=num;
+ 118   1      //  }
+ 119   1      //  for(i=length;i>0;i--){
+ 120   1      //  LCD1602_Data(num1/pow(10,i-1)%10+'0');
+ 121   1      //  //num=num%pow(10,i-1);
+ 122   1      //  }
+ 123   1      }
+ 124          //显示二进制数
+ 125          void LCD1602_BinNum(unsigned char row,unsigned char col,unsigned char num){
+ 126   1        unsigned char i=0;
+ 127   1        if(row==1){
+ 128   2          LCD1602_Commend(0x80|(col-1));
+ 129   2        }
+ 130   1        else if(row==2){
+ 131   2          LCD1602_Commend(0x80|(col-1)+0x40);
+ 132   2        }
+ 133   1        for(i=8;i>0;i--){
+ 134   2        LCD1602_Data(num/pow(2,i-1)%2+'0');
+ 135   2        }
+ 136   1      }
+ 137          //显示十六进制数
+ 138          void LCD1602_HexNum(unsigned char row,unsigned char col,unsigned int num){
+ 139   1        unsigned char arr[8];
+ 140   1        unsigned char i=0;
+ 141   1        unsigned char temp=0;
+ 142   1        unsigned int num1;
+ 143   1        unsigned int num2;
+ 144   1        if(row==1){
+ 145   2          LCD1602_Commend(0x80|(col-1));
+ 146   2        }
+ 147   1        else if(row==2){
+ 148   2          LCD1602_Commend(0x80|(col-1)+0x40);
+ 149   2        }
+ 150   1        LCD1602_Data('0');
+ 151   1        LCD1602_Data('X');
+ 152   1        for(i=2;i>0;i--){
+ 153   2        temp=num/pow(16,i-1)%16;
+ 154   2          if(temp>=10){
+ 155   3          LCD1602_Data(temp-10+'A');
+ 156   3          }
+ 157   2          else {
+ 158   3          LCD1602_Data(temp+'0');
+ 159   3          }
+ 160   2        }
+ 161   1        for(i=7;i>=0;i--){
+ 162   2          arr[i]=num/pow(2,i)%2;
+ 163   2        }
+ 164   1        for(i=7;i>=4;i--){
+ 165   2        num1+=pow(2,i-4);
+ 166   2        }
+ 167   1        for(i=3;i>=0;i--){
+ 168   2        num2+=pow(2,i);
+ 169   2        }
+ 170   1      //   num1 = (num >> 4) & 0x0F;  // 高4位  
+ 171   1      //   num2 = num & 0x0F;         // 低4位  
+ 172   1        if(num1>=10){
+ 173   2        num1=num1-10+'A';
+ 174   2        }
+ 175   1        else
+ 176   1        {
+ 177   2          num1+='0';
+ 178   2        }
+C51 COMPILER V9.60.7.0   LCD1602                                                           09/26/2024 23:42:32 PAGE 4   
+
+ 179   1        if(num2>=10){
+ 180   2        num2=num2-10+'A';
+ 181   2        }
+ 182   1        else
+ 183   1        {
+ 184   2        num2=num2+'0';
+ 185   2        }
+ 186   1        LCD1602_Data((unsigned char )num1);
+ 187   1        LCD1602_Data((unsigned char )num2);
+ 188   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    674    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----      36
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

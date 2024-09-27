@@ -1,0 +1,42 @@
+C51 COMPILER V9.60.7.0   MAIN                                                              09/26/2024 23:57:35 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\Objects\main.obj
+COMPILER INVOKED BY: D:\keil5\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\main.l
+                    -st) TABS(2) OBJECT(.\Objects\main.obj)
+
+line level    source
+
+   1          #include "delay.h"
+   2          #include "LCD1602.h"
+   3          void main(){
+   4   1        LCD1602_Init();
+   5   1      //  LCD1602_ShowChar(1,10,'c');
+   6   1      //  LCD1602_ShowString(2,2,"absdf!");
+   7   1      //  LCD1602_ShowNum(2,10,555,3);
+   8   1      //  LCD1602_BinNum(1,1,28);
+   9   1      //  LCD1602_HexNum(1,11,96);
+  10   1      //  LCD1602_ShowChar(2,13,0xdf);
+  11   1        LCD1602_ShowChar(2,14,'C');
+  12   1        LCD1602_ShowString(1,16,"i am the fast man alive in world");
+  13   1        LCD1602_ShowSignedNum(2,13,-88,2);
+  14   1        while(1){
+  15   2        LCD1602_Commend(0x18);
+  16   2          delay(4);
+  17   2        }
+  18   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     51    ----
+   CONSTANT SIZE    =     33    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
