@@ -1,0 +1,348 @@
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                    09/27/2024  19:43:19  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22.4.0, INVOKED BY:
+D:\KEIL5\C51\BIN\BL51.EXE .\Objects\main.obj, .\Objects\time0.obj, .\Objects\rekey.obj, .\Objects\smotors.obj, .\Objects
+>> \xianshi.obj TO .\Objects\project PRINT (.\Listings\project.m51) RAMSIZE (256) DISABLEWARNING (16)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  .\Objects\main.obj (MAIN)
+  .\Objects\time0.obj (TIME0)
+  .\Objects\rekey.obj (REKEY)
+  .\Objects\smotors.obj (SMOTORS)
+  .\Objects\xianshi.obj (XIANSHI)
+  D:\KEIL5\C51\LIB\C51S.LIB (?C_STARTUP)
+  D:\KEIL5\C51\LIB\C51S.LIB (?C_INIT)
+
+
+LINK MAP OF MODULE:  .\Objects\project (MAIN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0016H     UNIT         ?DT?XIANSHI
+            DATA    001EH     0006H     UNIT         ?DT?MAIN
+            DATA    0024H     0004H     UNIT         ?DT?REKEY
+            IDATA   0028H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0008H     UNIT         ?PR?REKEY_RETURN?REKEY
+            CODE    000BH     0003H     ABSOLUTE     
+            CODE    000EH     008CH     UNIT         ?C_C51STARTUP
+            CODE    009AH     0076H     UNIT         ?PR?TIME0?MAIN
+            CODE    0110H     0066H     UNIT         ?PR?_XIANSHI?XIANSHI
+            CODE    0176H     0041H     UNIT         ?PR?REKEY_LOOP?REKEY
+            CODE    01B7H     003CH     UNIT         ?PR?MAIN?MAIN
+            CODE    01F3H     0023H     UNIT         ?C_INITSEG
+            CODE    0216H     001BH     UNIT         ?PR?XIANSHI_LOOP?XIANSHI
+            CODE    0231H     0016H     UNIT         ?PR?REKEY?REKEY
+            CODE    0247H     0010H     UNIT         ?PR?TIME0_INIT?TIME0
+            CODE    0257H     0009H     UNIT         ?PR?SMOTORS_START?SMOTORS
+            CODE    0260H     0009H     UNIT         ?PR?SMOTORS_STOP?SMOTORS
+            CODE    0269H     0007H     UNIT         ?PR?_XIANSHI_0?XIANSHI
+
+
+
+OVERLAY MAP OF MODULE:   .\Objects\project (MAIN)
+
+
+SEGMENT
+  +--> CALLED SEGMENT
+---------------------
+?PR?TIME0?MAIN
+  +--> ?PR?SMOTORS_START?SMOTORS
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  09/27/2024  19:43:19  PAGE 2
+
+
+  +--> ?PR?SMOTORS_STOP?SMOTORS
+  +--> ?PR?REKEY_LOOP?REKEY
+  +--> ?PR?XIANSHI_LOOP?XIANSHI
+
+?PR?REKEY_LOOP?REKEY
+  +--> ?PR?REKEY?REKEY
+
+?PR?XIANSHI_LOOP?XIANSHI
+  +--> ?PR?_XIANSHI?XIANSHI
+
+*** NEW ROOT ***************************************************
+
+?C_C51STARTUP
+  +--> ?PR?MAIN?MAIN
+  +--> ?C_INITSEG
+
+?PR?MAIN?MAIN
+  +--> ?PR?TIME0_INIT?TIME0
+  +--> ?PR?REKEY_RETURN?REKEY
+  +--> ?PR?_XIANSHI_0?XIANSHI
+
+
+
+SYMBOL TABLE OF MODULE:  .\Objects\project (MAIN)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  D:001EH         PUBLIC        speed
+  C:01B7H         PUBLIC        main
+  D:001FH         PUBLIC        count
+  D:0020H         PUBLIC        temp
+  D:0021H         PUBLIC        key
+  D:008CH         PUBLIC        TH0
+  D:008AH         PUBLIC        TL0
+  D:0022H         PUBLIC        count1
+  D:0023H         PUBLIC        count2
+  C:009AH         PUBLIC        time0
+  -------         PROC          MAIN
+  C:01B7H         LINE#         8
+  C:01B7H         LINE#         9
+  C:01BAH         LINE#         10
+  C:01BAH         LINE#         11
+  C:01BFH         LINE#         12
+  C:01C4H         LINE#         13
+  C:01C6H         LINE#         14
+  C:01C9H         LINE#         15
+  C:01D8H         LINE#         16
+  C:01D8H         LINE#         17
+  C:01DDH         LINE#         18
+  C:01E2H         LINE#         19
+  C:01E7H         LINE#         20
+  C:01EAH         LINE#         21
+  C:01EAH         LINE#         22
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  09/27/2024  19:43:19  PAGE 3
+
+
+  C:01EAH         LINE#         23
+  C:01F1H         LINE#         24
+  -------         ENDPROC       MAIN
+  -------         PROC          TIME0
+  C:009AH         LINE#         26
+  C:00B7H         LINE#         27
+  C:00BAH         LINE#         28
+  C:00BDH         LINE#         29
+  C:00BFH         LINE#         30
+  C:00C8H         LINE#         31
+  C:00CAH         LINE#         32
+  C:00CCH         LINE#         33
+  C:00D3H         LINE#         34
+  C:00D6H         LINE#         35
+  C:00D8H         LINE#         37
+  C:00D8H         LINE#         38
+  C:00DBH         LINE#         39
+  C:00DBH         LINE#         40
+  C:00E2H         LINE#         41
+  C:00E5H         LINE#         42
+  C:00E8H         LINE#         43
+  C:00E8H         LINE#         44
+  C:00EFH         LINE#         45
+  C:00F2H         LINE#         46
+  C:00F5H         LINE#         47
+  C:00F5H         LINE#         48
+  -------         ENDPROC       TIME0
+  -------         ENDMOD        MAIN
+
+  -------         MODULE        TIME0
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  B:00A8H.7       PUBLIC        EA
+  D:0089H         PUBLIC        TMOD
+  B:00A8H.1       PUBLIC        ET0
+  D:008CH         PUBLIC        TH0
+  D:008AH         PUBLIC        TL0
+  B:0088H.4       PUBLIC        TR0
+  C:0247H         PUBLIC        time0_Init
+  -------         PROC          TIME0_INIT
+  C:0247H         LINE#         2
+  C:0247H         LINE#         3
+  C:024AH         LINE#         4
+  C:024DH         LINE#         5
+  C:0250H         LINE#         7
+  C:0252H         LINE#         8
+  C:0254H         LINE#         9
+  C:0256H         LINE#         11
+  -------         ENDPROC       TIME0_INIT
+  -------         ENDMOD        TIME0
+
+  -------         MODULE        REKEY
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  B:00B0H.0       PUBLIC        P3_0
+  B:00B0H.1       PUBLIC        P3_1
+  B:00B0H.2       PUBLIC        P3_2
+  B:00B0H.3       PUBLIC        P3_3
+  C:0231H         PUBLIC        rekey
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  09/27/2024  19:43:19  PAGE 4
+
+
+  C:0003H         PUBLIC        rekey_return
+  C:0176H         PUBLIC        rekey_loop
+  D:0026H         PUBLIC        K
+  -------         PROC          REKEY_RETURN
+  -------         DO            
+  D:0007H         SYMBOL        temp
+  -------         ENDDO         
+  C:0003H         LINE#         3
+  C:0003H         LINE#         4
+  C:0004H         LINE#         5
+  C:0006H         LINE#         6
+  C:000AH         LINE#         7
+  C:000AH         LINE#         8
+  -------         ENDPROC       REKEY_RETURN
+  -------         PROC          REKEY
+  -------         DO            
+  D:0007H         SYMBOL        key
+  -------         ENDDO         
+  C:0231H         LINE#         9
+  C:0231H         LINE#         10
+  C:0233H         LINE#         11
+  C:0236H         LINE#         12
+  C:0237H         LINE#         13
+  C:0237H         LINE#         14
+  C:023AH         LINE#         15
+  C:023CH         LINE#         16
+  C:023CH         LINE#         17
+  C:023FH         LINE#         18
+  C:0241H         LINE#         19
+  C:0241H         LINE#         20
+  C:0244H         LINE#         21
+  C:0246H         LINE#         22
+  C:0246H         LINE#         23
+  C:0246H         LINE#         24
+  -------         ENDPROC       REKEY
+  -------         PROC          REKEY_LOOP
+  -------         DO            
+  D:0024H         SYMBOL        cur
+  D:0025H         SYMBOL        prev
+  -------         ENDDO         
+  C:0176H         LINE#         26
+  C:0176H         LINE#         28
+  C:0179H         LINE#         29
+  C:017EH         LINE#         30
+  C:0187H         LINE#         31
+  C:018CH         LINE#         32
+  C:018CH         LINE#         33
+  C:0195H         LINE#         34
+  C:019AH         LINE#         35
+  C:019AH         LINE#         36
+  C:01A3H         LINE#         37
+  C:01A8H         LINE#         38
+  C:01A8H         LINE#         39
+  C:01B1H         LINE#         40
+  C:01B6H         LINE#         41
+  C:01B6H         LINE#         42
+  -------         ENDPROC       REKEY_LOOP
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  09/27/2024  19:43:19  PAGE 5
+
+
+  -------         ENDMOD        REKEY
+
+  -------         MODULE        SMOTORS
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0090H         PUBLIC        P1
+  C:0257H         PUBLIC        smotors_Start
+  C:0260H         PUBLIC        smotors_Stop
+  B:0090H.0       PUBLIC        IN1
+  B:0090H.1       PUBLIC        IN2
+  B:0090H.2       PUBLIC        IN3
+  B:0090H.3       PUBLIC        IN4
+  -------         PROC          SMOTORS_START
+  C:0257H         LINE#         2
+  C:0257H         LINE#         3
+  C:025FH         LINE#         4
+  -------         ENDPROC       SMOTORS_START
+  -------         PROC          SMOTORS_STOP
+  C:0260H         LINE#         5
+  C:0260H         LINE#         6
+  C:0268H         LINE#         7
+  -------         ENDPROC       SMOTORS_STOP
+  -------         ENDMOD        SMOTORS
+
+  -------         MODULE        XIANSHI
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  C:0269H         PUBLIC        _xianshi_0
+  B:00A0H.2       PUBLIC        P2_2
+  B:00A0H.3       PUBLIC        P2_3
+  C:0216H         PUBLIC        xianshi_loop
+  B:00A0H.4       PUBLIC        P2_4
+  D:0009H         PUBLIC        ARR1
+  D:0012H         PUBLIC        arr
+  C:0110H         PUBLIC        _xianshi
+  -------         PROC          _XIANSHI_0
+  D:0007H         SYMBOL        location
+  D:0005H         SYMBOL        num
+  C:0269H         LINE#         6
+  C:0269H         LINE#         7
+  C:026FH         LINE#         9
+  -------         ENDPROC       _XIANSHI_0
+  -------         PROC          _XIANSHI
+  D:0007H         SYMBOL        location
+  D:0004H         SYMBOL        number
+  C:0110H         LINE#         10
+  C:0110H         LINE#         11
+  C:0113H         LINE#         12
+  C:0140H         LINE#         13
+  C:0142H         LINE#         14
+  C:0142H         LINE#         15
+  C:0142H         LINE#         16
+  C:0144H         LINE#         17
+  C:0146H         LINE#         18
+  C:0148H         LINE#         19
+  C:014AH         LINE#         20
+  C:014CH         LINE#         21
+  C:014EH         LINE#         22
+BL51 BANKED LINKER/LOCATER V6.22.4.0                                                  09/27/2024  19:43:19  PAGE 6
+
+
+  C:014EH         LINE#         23
+  C:014EH         LINE#         24
+  C:0150H         LINE#         25
+  C:0152H         LINE#         26
+  C:0154H         LINE#         27
+  C:0156H         LINE#         28
+  C:0158H         LINE#         29
+  C:015AH         LINE#         30
+  C:015AH         LINE#         31
+  C:015AH         LINE#         32
+  C:015CH         LINE#         33
+  C:015EH         LINE#         34
+  C:0160H         LINE#         35
+  C:0162H         LINE#         36
+  C:0164H         LINE#         37
+  C:0166H         LINE#         38
+  C:0166H         LINE#         39
+  C:0166H         LINE#         40
+  C:0168H         LINE#         41
+  C:016AH         LINE#         42
+  C:016CH         LINE#         43
+  C:016EH         LINE#         44
+  C:016EH         LINE#         45
+  C:016EH         LINE#         46
+  C:016EH         LINE#         47
+  C:016EH         LINE#         48
+  C:0175H         LINE#         49
+  -------         ENDPROC       _XIANSHI
+  -------         PROC          XIANSHI_LOOP
+  -------         DO            
+  D:0008H         SYMBOL        i
+  -------         ENDDO         
+  C:0216H         LINE#         50
+  C:0216H         LINE#         52
+  C:0224H         LINE#         53
+  C:0226H         LINE#         54
+  C:022DH         LINE#         55
+  C:0230H         LINE#         56
+  C:0230H         LINE#         57
+  -------         ENDPROC       XIANSHI_LOOP
+  -------         ENDMOD        XIANSHI
+
+Program Size: data=41.0 xdata=0 code=624
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

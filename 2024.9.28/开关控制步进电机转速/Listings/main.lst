@@ -1,0 +1,74 @@
+C51 COMPILER V9.60.7.0   MAIN                                                              09/27/2024 19:40:41 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE MAIN
+OBJECT MODULE PLACED IN .\Objects\main.obj
+COMPILER INVOKED BY: D:\keil5\C51\BIN\C51.EXE main.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\main.l
+                    -st) TABS(2) OBJECT(.\Objects\main.obj)
+
+line level    source
+
+   1          #include "rekey.h"
+   2          #include "time0.h"
+   3          #include "smotore.h"
+   4          #include "xianshi.h"
+   5          unsigned char key;
+   6          unsigned char count,count1,count2,temp;
+   7          unsigned char speed;
+   8          void main(){
+   9   1        time0_Init();
+  10   1        while(1){
+  11   2          key=rekey_return();
+  12   2          if(key==1){
+  13   3          speed++;
+  14   3            speed%=4;
+  15   3            switch(speed)
+  16   3            {
+  17   4              case 0:temp=0;break;
+  18   4              case 1:temp=30;break;
+  19   4              case 2:temp=60;break;
+  20   4              case 3:temp=100;break;
+  21   4            }
+  22   3          }
+  23   2            xianshi_0(1,speed);
+  24   2        }
+  25   1      }
+  26          void time0() interrupt 1{
+  27   1        TH0=0XFf;
+  28   1        TL0=0Xa4;
+  29   1        count++;
+  30   1        count%=100;
+  31   1        count1++;
+  32   1        count2++;
+  33   1        if(count<=temp){
+  34   2        smotors_Start();
+  35   2        }
+  36   1        else
+  37   1        {
+  38   2        smotors_Stop();
+  39   2        }
+  40   1        if(count2>=10){
+  41   2        count2=0;
+  42   2        rekey_loop();
+  43   2        }
+  44   1        if(count1>=20){
+  45   2        count1=0;
+  46   2        xianshi_loop();
+  47   2        }
+  48   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    178    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+C51 COMPILER V9.60.7.0   MAIN                                                              09/27/2024 19:40:41 PAGE 2   
+
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      6    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

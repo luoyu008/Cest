@@ -1,0 +1,8 @@
+".\Objects\main.obj",
+".\Objects\time0.obj",
+".\Objects\rekey.obj",
+".\Objects\smotors.obj",
+".\Objects\xianshi.obj" 
+TO ".\Objects\project" 
+PRINT(".\Listings\project.m51") RAMSIZE(256) 
+DISABLEWARNING (16) 

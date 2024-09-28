@@ -1,0 +1,66 @@
+C51 COMPILER V9.60.7.0   REKEY                                                             09/27/2024 19:34:23 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE REKEY
+OBJECT MODULE PLACED IN .\Objects\rekey.obj
+COMPILER INVOKED BY: D:\keil5\C51\BIN\C51.EXE rekey.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\rekey
+                    -.lst) TABS(2) OBJECT(.\Objects\rekey.obj)
+
+line level    source
+
+   1          #include "rekey.h"
+   2          unsigned K;
+   3          unsigned char rekey_return(){
+   4   1        unsigned char temp=0;
+   5   1        temp=K;
+   6   1        K=0;
+   7   1        return temp;
+   8   1      }
+   9          unsigned char  rekey(){
+  10   1        unsigned char key=0;
+  11   1        if(P3_1==0){
+  12   2          key=1;
+  13   2        }
+  14   1        if(P3_0==0){
+  15   2          key=2;
+  16   2        }
+  17   1        if(P3_2==0){
+  18   2          key=3;
+  19   2        }
+  20   1        if(P3_3==0){
+  21   2          key=4;
+  22   2        }
+  23   1        return key;
+  24   1      }
+  25          
+  26          void rekey_loop(){
+  27   1        static unsigned char  cur=0,prev=0;
+  28   1        prev=cur;
+  29   1        cur=rekey();
+  30   1        if(prev==1&&cur==0){
+  31   2        K=1;
+  32   2        }
+  33   1        if(prev==2&&cur==0){
+  34   2        K=2;
+  35   2        }
+  36   1        if(prev==3&&cur==0){
+  37   2        K=3;
+  38   2        }
+  39   1        if(prev==4&&cur==0){
+  40   2        K=4;
+  41   2        }
+  42   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     95    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      4    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
