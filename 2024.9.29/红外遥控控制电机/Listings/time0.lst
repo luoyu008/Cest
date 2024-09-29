@@ -1,0 +1,44 @@
+C51 COMPILER V9.60.7.0   TIME0                                                             09/29/2024 15:55:46 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE TIME0
+OBJECT MODULE PLACED IN .\Objects\time0.obj
+COMPILER INVOKED BY: D:\keil5\C51\BIN\C51.EXE time0.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\time0
+                    -.lst) TABS(2) OBJECT(.\Objects\time0.obj)
+
+line level    source
+
+   1          #include "time0.h"
+   2          void time0_Init(){
+   3   1        TMOD &= 0xF0;
+   4   1        TMOD|=0x01;
+   5   1        TH0=0;
+   6   1        TL0=0;
+   7   1        TF0=0;
+   8   1        TR0=0;
+   9   1      }
+  10          void time0_con(unsigned char flag){//控制定时器0的启动
+  11   1        TR0=flag;
+  12   1      }
+  13          void time0_set(unsigned int num){//定时器0设置
+  14   1        TH0=num/256;
+  15   1        TL0=num%256;
+  16   1      }
+  17          unsigned int time0_return()//返回定时器走了多少数字
+  18          {
+  19   1        return (TH0<<8)|TL0;
+  20   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     42    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
