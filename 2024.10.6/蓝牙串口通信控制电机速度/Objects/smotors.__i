@@ -1,0 +1,1 @@
+"smotors.c" OPTIMIZE (8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\smotors.lst) OBJECT(.\Objects\smotors.obj)

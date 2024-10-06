@@ -1,0 +1,93 @@
+C51 COMPILER V9.60.7.0   XIANSHI                                                           10/06/2024 11:48:12 PAGE 1   
+
+
+C51 COMPILER V9.60.7.0, COMPILATION OF MODULE XIANSHI
+OBJECT MODULE PLACED IN .\Objects\xianshi.obj
+COMPILER INVOKED BY: D:\keil5\C51\BIN\C51.EXE xianshi.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listings\xia
+                    -nshi.lst) OBJECT(.\Objects\xianshi.obj)
+
+line level    source
+
+   1          #include "xianshi.h"
+   2          unsigned char ARR1[]={0,10,10,10,10,10,10,10,10};
+   3          unsigned char arr[]={0x3F,0x06,0x5B,0x4F,0x66,0x6D,0x7D,0x07,0x7F,0x6F,0x00,0x80
+   4                                                                                           //0x6f,0x7f,0x07,0x7d,0x6d,0x66,0x4f,0x5b,0x06,0x3f,0x00
+   5                  };
+   6          void xianshi_0(unsigned char location,unsigned char num){
+   7   1              ARR1[location]=num;
+   8   1              //xianshi(location,ARR1[location]);
+   9   1      }
+  10          void xianshi(unsigned char location,number){
+  11   1              P0=0x00;
+  12   1              switch(location){
+  13   2                      case 8:P2_2=0;
+  14   2                      P2_3=0;
+  15   2              P2_4=0;
+  16   2                      break;
+  17   2                      case 7:P2_2=1;
+  18   2              P2_3=0;
+  19   2              P2_4=0;
+  20   2                      break;
+  21   2                      case 6:P2_2=0;
+  22   2              P2_3=1;
+  23   2              P2_4=0;
+  24   2                      break;
+  25   2                      case 5:P2_2=1;
+  26   2              P2_3=1;
+  27   2              P2_4=0;
+  28   2                      break;
+  29   2                      case 4:P2_2=0;
+  30   2              P2_3=0;
+  31   2              P2_4=1;
+  32   2                      break;
+  33   2                      case 3:P2_2=1;
+  34   2              P2_3=0;
+  35   2              P2_4=1;
+  36   2                      break;
+  37   2                      case 2:P2_2=0;
+  38   2              P2_3=1;
+  39   2              P2_4=1;
+  40   2                      break;
+  41   2                      case 1:P2_2=1;
+  42   2              P2_3=1;
+  43   2              P2_4=1;
+  44   2                      break;
+  45   2                      default:
+  46   2                              break;
+  47   2              }
+  48   1              P0=arr[number];
+  49   1      }
+  50          void xianshi_loop(){
+  51   1              static unsigned char i=1;
+  52   1              xianshi(i,ARR1[i]);
+  53   1              i++;
+  54   1              if(i>=9){
+C51 COMPILER V9.60.7.0   XIANSHI                                                           10/06/2024 11:48:12 PAGE 2   
+
+  55   2              i=1;
+  56   2              }
+  57   1      }
+  58          //void delay(unsigned int num){
+  59          //              unsigned char i,j;
+  60          //      i=2;
+  61          //      j=199;
+  62          //      while(num--){
+  63          //      do{
+  64          //              while(--j);
+  65          //      }while(--i);
+  66          //}
+  67          //      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    136    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =     22    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)

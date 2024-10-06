@@ -1,0 +1,9 @@
+".\Objects\main.obj",
+".\Objects\UART.obj",
+".\Objects\delay.obj",
+".\Objects\smotors.obj",
+".\Objects\time0.obj",
+".\Objects\xianshi.obj" 
+TO ".\Objects\project" 
+PRINT(".\Listings\project.m51") RAMSIZE(256) 
+DISABLEWARNING (16) 
