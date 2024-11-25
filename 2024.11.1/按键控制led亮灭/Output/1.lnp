@@ -1,0 +1,28 @@
+--cpu Cortex-M3
+"..\output\startup_stm32f103xb.o"
+"..\output\main.o"
+"..\output\gpio.o"
+"..\output\stm32f1xx_it.o"
+"..\output\stm32f1xx_hal_msp.o"
+"..\output\cled.o"
+"..\output\key.o"
+"..\output\delay.o"
+"..\output\myled.o"
+"..\output\stm32f1xx_hal_gpio_ex.o"
+"..\output\stm32f1xx_hal_tim.o"
+"..\output\stm32f1xx_hal_tim_ex.o"
+"..\output\stm32f1xx_hal.o"
+"..\output\stm32f1xx_hal_rcc.o"
+"..\output\stm32f1xx_hal_rcc_ex.o"
+"..\output\stm32f1xx_hal_gpio.o"
+"..\output\stm32f1xx_hal_dma.o"
+"..\output\stm32f1xx_hal_cortex.o"
+"..\output\stm32f1xx_hal_pwr.o"
+"..\output\stm32f1xx_hal_flash.o"
+"..\output\stm32f1xx_hal_flash_ex.o"
+"..\output\stm32f1xx_hal_exti.o"
+"..\output\system_stm32f1xx.o"
+--strict --scatter "..\Output\1.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list "..\List\1.map" -o ..\Output\1.axf

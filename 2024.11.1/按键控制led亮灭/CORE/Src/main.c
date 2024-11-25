@@ -13,15 +13,16 @@ int main(void)
   SystemClock_Config();
 	MYLED_Init();
  
-//  MX_GPIO_Init();
+  MX_GPIO_Init();
 
   while (1)
   {
 //	  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_4, GPIO_PIN_SET);
 //	  HAL_Delay(500);
-	  
+	  if(KEY_return()==1){
 	  HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_4);
-	  HAL_Delay(500);
+//	  HAL_Delay(500);
+	  }
 //	key=KEY_return();
 //	if(key==1){
 //		HAL_GPIO_WritePin(GPIOB,GPIO_PIN_4,GPIO_PIN_SET);
