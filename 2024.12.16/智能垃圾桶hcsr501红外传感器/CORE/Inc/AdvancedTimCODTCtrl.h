@@ -1,0 +1,9 @@
+#ifndef __ADVANCEDTIMCODTCTRL_H__
+#define __ADVANCEDTIMCODTCTRL_H__
+extern TIM_HandleTypeDef TIM_AdvancedCODTCtrlInit;
+extern TIM_OC_InitTypeDef TIM_OC_AdvancedCODTCtrlInit;
+extern TIM_BreakDeadTimeConfigTypeDef TIM_ACODTCtrlInit;
+void AdvancedTimCODTCtrl_Init(void);
+
+
+#endif
